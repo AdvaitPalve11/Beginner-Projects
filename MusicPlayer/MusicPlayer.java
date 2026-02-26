@@ -6,15 +6,18 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class MusicPlayer {
+    private final String filePath;
+    private Clip clip;
+    MusicPlayer(String filePath){
+        this.filePath = filePath;
+    }
 
-    public static void main(String[] args) throws UnsupportedAudioFileException, IOException {
-        String filePath = "C:\\Users\\Advait\\Documents\\Beginner-Projects\\MusicPlayer\\stopWaiting.wav";
+    void musicControl(){
         File file = new File(filePath);
-
         try(Scanner sc = new Scanner(System.in);
             AudioInputStream audioStream = AudioSystem.getAudioInputStream(file)){
 
-            Clip clip = AudioSystem.getClip();
+            clip = AudioSystem.getClip();
             clip.open(audioStream);
 
             String response = "";
@@ -30,24 +33,24 @@ public class MusicPlayer {
 
                 switch (response){
                     case "P" : clip.start();
-                    break;
+                        break;
 
                     case "S" : clip.stop();
-                    break;
+                        break;
 
-                    case "R" : clip.setMicrosecondPosition(0);
-                    break;
+                    case "R" :
+                        clip.stop();
+                        clip.setMicrosecondPosition(0);
+                        break;
 
                     case "Q" : clip.close();
-                    break;
+                        break;
 
                     default:
                         System.out.println("Invalid Choice");
 
                 }
             }
-
-
 
         }
         catch (FileNotFoundException e){
@@ -67,6 +70,13 @@ public class MusicPlayer {
             System.out.println("Song Ended");
 
         }
+
+    }
+
+    public static void main(String[] args){
+        String filePath = "C:\\Users\\Advait\\Documents\\Beginner-Projects\\MusicPlayer\\stopWaiting.wav";
+        MusicPlayer mp = new MusicPlayer(filePath);
+        mp.musicControl();
 
     }
 }
