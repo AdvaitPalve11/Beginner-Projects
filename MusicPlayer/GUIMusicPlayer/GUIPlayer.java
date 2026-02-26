@@ -74,7 +74,7 @@
 
         }
         public static void main(String[] args) {
-            String file = "C://Users//Advait//Documents//Beginner-Projects//MusicPlayer//stopWaiting.wav";
+            String file = "SONGFILEPATH";
             new GUIPlayer(file);
         }
     }
