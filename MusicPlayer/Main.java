@@ -19,9 +19,36 @@ public class Main {
 
             String response = "";
 
+            while(!response.equals("Q")){
+                System.out.println("P = Play");
+                System.out.println("S = Stop");
+                System.out.println("R = Reset");
+                System.out.println("Q = Quit");
+                System.out.print("Enter Your choice: ");
+
+                response = sc.next().toUpperCase();
+
+                switch (response){
+                    case "P" : clip.start();
+                    break;
+
+                    case "S" : clip.stop();
+                    break;
+
+                    case "R" : clip.setMicrosecondPosition(0);
+                    break;
+
+                    case "Q" : clip.close();
+                    break;
+
+                    default:
+                        System.out.println("Invalid Choice");
+
+                }
+            }
 
 
-            clip.start();
+
         }
         catch (FileNotFoundException e){
             System.out.println("File Not Found");
