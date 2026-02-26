@@ -84,7 +84,7 @@ public class AdvanceMusicPlayer implements AudioMethods {
 
 
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\Advait\\Documents\\Beginner-Projects\\MusicPlayer\\stopWaiting.wav";
+        String filePath = "SONGFILEPATH";
         AdvanceMusicPlayer mp = new AdvanceMusicPlayer(filePath);
         mp.musicControl();
 
