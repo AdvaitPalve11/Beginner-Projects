@@ -74,7 +74,7 @@ public class MusicPlayer {
     }
 
     public static void main(String[] args){
-        String filePath = "C:\\Users\\Advait\\Documents\\Beginner-Projects\\MusicPlayer\\stopWaiting.wav";
+        String filePath = "SONGFILEPATH";
         MusicPlayer mp = new MusicPlayer(filePath);
         mp.musicControl();
 
