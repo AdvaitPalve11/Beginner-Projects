@@ -1,4 +1,4 @@
-package MusicPlayer;
+package MusicPlayer.BaicMusicPlayer;
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.FileNotFoundException;
