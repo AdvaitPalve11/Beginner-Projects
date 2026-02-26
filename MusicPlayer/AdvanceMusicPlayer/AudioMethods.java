@@ -1,4 +1,4 @@
-package MusicPlayer;
+package MusicPlayer.AdvanceMusicPlayer;
 
 public interface AudioMethods {
     void play();

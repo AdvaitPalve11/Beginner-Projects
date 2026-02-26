@@ -1,4 +1,4 @@
-package MusicPlayer;
+package MusicPlayer.AdvanceMusicPlayer;
 import javax.sound.sampled.*;
 import java.io.File;
 import java.util.Scanner;
