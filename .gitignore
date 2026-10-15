@@ -1,16 +1,12 @@
-# Compiled class file
+# ==========================================
+# Java / JVM
+# ==========================================
 *.class
-
-# Log file
 *.log
-
-# BlueJ files
 *.ctxt
-
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
 *.jar
 *.war
 *.nar
@@ -19,17 +15,52 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# JVM crash logs
 hs_err_pid*
 replay_pid*
 
-# IntelliJ IDEA
+# ==========================================
+# IDEs & Editors
+# ==========================================
 .idea/
 *.iml
 out/
+.vscode/
 
-# C++ 
-.o
-.exe
-.vscode
-/build
+# ==========================================
+# C / C++
+# ==========================================
+# Object files, libraries, and executables
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.exe~
+
+# Debug symbols & build directories
+*.dSYM/
+build/
+bin/
+
+# ==========================================
+# Go
+# ==========================================
+# Binaries and test artifacts
+*.test
+*.out
+
+# Workspaces & environments
+go.work
+go.work.sum
+.env
+*.env
+
+# Coverage and profiling
+coverage.*
+!coverage.go
+*.coverprofile
+profile.cov
